@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Η Σελίδα μου</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            color: #4a5568;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .feature {
+            text-align: center;
+            color: white;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+
+        .interactive-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .form-group {
+            margin: 20px 0;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus {
+            outline: none;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Καλώς ήρθατε στη Σελίδα μου</h1>
+            <p class="subtitle">Μια σύγχρονη και όμορφη ιστοσελίδα</p>
+        </header>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <h3>Γρήγορη</h3>
+                <p>Βελτιστοποιημένη για ταχύτητα</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <h3>Responsive</h3>
+                <p>Λειτουργεί σε όλες τις συσκευές</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✨</div>
+                <h3>Σύγχρονη</h3>
+                <p>Μοντέρνο design και UX</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="card">
+                <h2>Σχετικά με μας</h2>
+                <p>Αυτή είναι μια όμορφη και σύγχρονη ιστοσελίδα που δημιουργήθηκε με HTML και CSS. Χρησιμοποιεί σύγχρονες τεχνικές σχεδιασμού όπως gradients, backdrop filters και responsive design για να προσφέρει μια εξαιρετική εμπειρία χρήστη.</p>
+                <button class="btn" onclick="showMessage()">Μάθετε περισσότερα</button>
+            </div>
+
+            <div class="card">
+                <h2>Υπηρεσίες</h2>
+                <p>Προσφέρουμε διάφορες υπηρεσίες web development, από απλές ιστοσελίδες μέχρι πολύπλοκες web εφαρμογές. Η ομάδα μας έχει εμπειρία σε σύγχρονες τεχνολογίες και καλές πρακτικές UX/UI design.</p>
+                <button class="btn" onclick="showServices()">Δείτε τις υπηρεσίες</button>
+            </div>
+
+            <div class="card">
+                <h2>Επικοινωνία</h2>
+                <p>Θέλετε να δημιουργήσουμε κάτι εκπληκτικό μαζί; Επικοινωνήστε μαζί μας για να συζητήσουμε το επόμενο έργο σας. Είμαστε εδώ για να σας βοηθήσουμε να υλοποιήσετε τις ιδέες σας.</p>
+                <button class="btn" onclick="showContact()">Επικοινωνήστε</button>
+            </div>
+        </div>
+
+        <div class="interactive-section">
+            <h2 style="color: white; margin-bottom: 20px;">Εγγραφείτε στο Newsletter</h2>
+            <div class="form-group">
+                <input type="text" placeholder="Το όνομά σας" id="nameInput">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Το email σας" id="emailInput">
+            </div>
+            <button class="btn" onclick="subscribe()">Εγγραφή</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Η Σελίδα μου. Όλα τα δικαιώματα διατηρούνται.</p>
+            <p>Δημιουργήθηκε με ❤️ και σύγχρονες web τεχνολογίες</p>
+        </footer>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert('Ευχαριστούμε για το ενδιαφέρον σας! Αυτή η σελίδα δημιουργήθηκε με σύγχρονες τεχνικές HTML, CSS και JavaScript.');
+        }
+
+        function showServices() {
+            alert('Οι υπηρεσίες μας περιλαμβάνουν:\n• Web Development\n• UI/UX Design\n• Responsive Design\n• Performance Optimization');
+        }
+
+        function showContact() {
+            alert('Επικοινωνήστε μαζί μας:\n📧 Email: info@example.com\n📞 Τηλέφωνο: +30 210 1234567');
+        }
+
+        function subscribe() {
+            const name = document.getElementById('nameInput').value;
+            const email = document.getElementById('emailInput').value;
+            
+            if (name && email) {
+                alert(`Ευχαριστούμε ${name}! Εγγραφήκατε επιτυχώς με το email: ${email}`);
+                document.getElementById('nameInput').value = '';
+                document.getElementById('emailInput').value = '';
+            } else {
+                alert('Παρακαλώ συμπληρώστε όλα τα πεδία!');
+            }
+        }
+
+        // Smooth scroll effect
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                // Add a ripple effect
+                const ripple = document.createElement('span');
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255,255,255,0.6)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.left = (e.clientX - e.target.offsetLeft) + 'px';
+                ripple.style.top = (e.clientY - e.target.offsetTop) + 'px';
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            .btn {
+                position: relative;
+                overflow: hidden;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
